@@ -1,0 +1,74 @@
+.contenidor {
+    width: 100%;
+    height: 100%;
+}
+.header {
+    width: 100%;
+    height: 200px;
+}
+@keyframes button-header-hover {
+    0% {
+        color: darkcyan;
+        transform: scale(1.0);
+    }
+    100% {
+        color: blueviolet;
+        transform: scale(1.1);
+    }
+}
+@keyframes button-header-unhover {
+    0% {
+        color: blueviolet;
+        transform: scale(1.1);
+    }
+    100% {
+        color: darkcyan;
+        transform: scale(1.0);
+    }
+}
+.boto-header {
+    color: darkcyan;
+    border: 0px transparent;
+    background-color: inherit;
+    margin-top: 14px;
+    width: 120px;
+    height: 20px;
+    font-weight: bolder;
+    font-size: large;
+}
+.boto-header:hover {
+    animation: button-header-hover 450ms forwards;
+}
+.boto-header:not(:hover) {
+    animation: button-header-unhover 450ms forwards;
+}
+.boto {
+    border: 38px;
+    border-radius: 12px;
+    background-image: radial-gradient(aliceblue, aqua);
+    padding: 14px;
+    margin: 14px;
+    width: 80px;
+    height: 35px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: IM;
+    color: blueviolet;
+}
+.boto:hover {
+    background-image: radial-gradient(blue, blueviolet);
+    color: white;
+}
+.combo-buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#header-img {
+    width: 100%;
+    height: 100%;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}

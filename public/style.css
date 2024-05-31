@@ -1,0 +1,15 @@
+body, header {
+    margin: 0px;
+    padding: 0px;
+}
+h1 {
+    color: dodgerblue;
+    text-align: center;
+}
+h2 {
+    color: crimson;
+}
+hr {
+    color: black;
+    opacity: 40%;
+}

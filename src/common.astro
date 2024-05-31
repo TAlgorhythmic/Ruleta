@@ -1,0 +1,31 @@
+---
+
+---
+
+<!DOCTYPE html>
+<html lang="cat">
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="ruleta">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="classes.css">
+        <title>Ruleta</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="header">
+                <img id="header-img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.jgMwPEyPdkszKeo58SZiEQHaEc%26pid%3DApi&f=1&ipt=2ca0ae0c5fbd59430782b7f9078876458fbe9ac4413f6ef3b6110ae1e4a57513&ipo=images">
+                <div class="contenidor" style="display: flex; flex-direction: row; justify-content: center;">
+                    <button type="button" class="boto-header">Reiniciar joc</button>
+                </div>
+            </nav>
+        </header>
+
+        <h1>Joc de la ruleta</h1>
+
+        <div class="container">
+            <slot />
+        </div>
+    </body>
+</html>
