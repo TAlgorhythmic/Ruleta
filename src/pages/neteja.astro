@@ -1,0 +1,13 @@
+---
+import { COOKIES_ID } from "./public.astro";
+
+function redirect() {
+    return Astro.redirect('/');
+}
+
+function create() {
+    Astro.cookies.set(COOKIES_ID, JSON.stringify([]), { path: '/'});
+}
+create();
+return redirect();
+---

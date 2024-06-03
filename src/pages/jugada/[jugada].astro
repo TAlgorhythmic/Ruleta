@@ -1,7 +1,9 @@
 ---
-import Common from "../common.astro";
-import Ruleta from "./ruleta.astro";
-import { COOKIES_ID } from "./public.astro";
+import Common from "../../common.astro";
+import Ruleta from "../ruleta.astro";
+import { COOKIES_ID } from "../public.astro";
+
+const {jugada} = Astro.params;
 
 function createIfNotExists() {
     if (!Astro.cookies.has(COOKIES_ID)) {
@@ -19,7 +21,6 @@ function parse() {
 
 createIfNotExists();
 const data = parse();
-
 ---
 
 <Common>
