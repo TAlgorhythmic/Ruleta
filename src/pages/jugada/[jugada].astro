@@ -1,7 +1,7 @@
 ---
-import Common from "../../common.astro";
+import Common from "../common.astro";
 import Ruleta from "../ruleta.astro";
-import { COOKIES_ID } from "../public.astro";
+import { COOKIES_ID, DOTZENA1, DOTZENA2, DOTZENA3, FINS_18, FINS_36, PARELL, IMPARELL, VERMELL, NEGRE } from "../public.astro";
 
 const {jugada} = Astro.params;
 
@@ -10,13 +10,49 @@ function createIfNotExists() {
         create();
     }
 }
-
+function redirect() {
+    return Astro.redirect('/');
+}
 function create() {
     Astro.cookies.set(COOKIES_ID, JSON.stringify([]), { path: '/'});
 }
-
 function parse() {
     return JSON.parse(Astro.cookies.get(COOKIES_ID).value);
+}
+
+function constructJugada(j) {
+    switch (j) {
+        case DOTZENA1: {
+            break;
+        }
+        case DOTZENA2: {
+            break;
+        }
+        case DOTZENA3: {
+            break;
+        }
+        case FINS_18: {
+            break;
+        }
+        case FINS_36: {
+            break;
+        }
+        case PARELL: {
+            break;
+        }
+        case IMPARELL: {
+            break;
+        }
+        case VERMELL: {
+            break;
+        }
+        case NEGRE: {
+            break;
+        }
+        default: {
+            break;
+        }
+    }
 }
 
 createIfNotExists();

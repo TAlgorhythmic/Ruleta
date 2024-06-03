@@ -1,32 +1,19 @@
 ---
 const COOKIES_ID = "gg.dyst.algorhythmics.ruleta";
 
-export function createIfNotExists() {
-    if (!Astro.cookies.has(COOKIES_ID)) {
-        create();
-    }
-}
+// Jugades
+const DOTZENA1 = "1ra Dotzena";
+const DOTZENA2 = "2na Dotzena";
+const DOTZENA3 = "3ra Dotzena";
 
-export function create() {
-    Astro.cookies.set(COOKIES_ID, JSON.stringify([]), { path: '/'});
-}
+const FINS_18 = "1-18";
+const FINS_36 = "19-36";
 
-export function update() {
+const PARELL = "Parell";
+const IMPARELL = "Imparell";
 
-}
+const VERMELL = "Vermell";
+const NEGRE = "Negre";
 
-export function parse() {
-    return JSON.parse(Astro.cookies.get(COOKIES_ID).value);
-}
-
-export function redirect() {
-    Astro.redirect('/');
-}
-
-export function handleClickReset() {
-    create();
-    redirect();
-}
-
-export { COOKIES_ID };
+export { COOKIES_ID, DOTZENA1, DOTZENA2, DOTZENA3, FINS_18, FINS_36, PARELL, IMPARELL, VERMELL, NEGRE };
 ---
