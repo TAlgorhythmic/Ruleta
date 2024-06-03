@@ -1,0 +1,131 @@
+.numberbox {
+    width: 92.857142857%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    direction: row;
+}
+.apostes-opcions-box {
+    width: 100%;
+    height: 33%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    direction: row;
+}
+.upperbox {
+    width: 96%;
+    height: 460px;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 0%;
+    border: 1px solid green;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    direction: row;
+}
+.innerbox {
+    width: 7.142857143%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    direction: row;
+}
+.red {
+    background-color: red;
+}
+.black {
+    background-color: black;
+}
+.green {
+    background-color: green;
+}
+.number {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    border: 1px solid white;
+    height: 32.95%;
+    flex: 1 1 7.142857143%;
+    width: 7.562857143%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: 56px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+.text {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    border: 1px solid white;
+    height: 32.95%;
+    flex: 1 1 7.142857143%;
+    width: 7.562857143%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: 32px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+.ters {
+    width: 32.95%;
+    flex: 1 1 32.94%;
+}
+.sisena {
+    width: 16.175%;
+    flex: 1 1 16.17%;
+}
+.text-apostes {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    border: 1px solid white;
+    height: 50%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: 32px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+#zero {
+    margin: 0px;
+    padding: 0px;
+    background-color: green;
+    color: white;
+    border: 1px solid white;
+    height: 280px;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: 56px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+.ruleta {
+    width: 96%;
+    height: 560px;
+    margin: 2%;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clickable {
+    text-decoration: none;
+    color: white;
+}
+.clickable:hover {
+    text-shadow: 0px 0px 12px yellow;
+}

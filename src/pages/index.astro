@@ -1,7 +1,29 @@
 ---
-import Common from "../common.astro"
+import Common from "../common.astro";
+import Ruleta from "../ruleta.astro";
+import { COOKIES_ID } from "../public.astro";
+
+function createIfNotExists() {
+    if (!Astro.cookies.has(COOKIES_ID)) {
+        create();
+    }
+}
+
+function create() {
+    Astro.cookies.set(COOKIES_ID, JSON.stringify([]), { path: '/'});
+}
+
+function parse() {
+    return JSON.parse(Astro.cookies.get(COOKIES_ID).value);
+}
+
+Astro.cookies.delete(COOKIES_ID);
+createIfNotExists();
+const data = parse();
+
 ---
 
 <Common>
-	
+    <Ruleta />
+
 </Common>

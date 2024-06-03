@@ -1,0 +1,32 @@
+---
+const COOKIES_ID = "gg.dyst.algorhythmics.ruleta";
+
+export function createIfNotExists() {
+    if (!Astro.cookies.has(COOKIES_ID)) {
+        create();
+    }
+}
+
+export function create() {
+    Astro.cookies.set(COOKIES_ID, JSON.stringify([]), { path: '/'});
+}
+
+export function update() {
+
+}
+
+export function parse() {
+    return JSON.parse(Astro.cookies.get(COOKIES_ID).value);
+}
+
+export function redirect() {
+    Astro.redirect('/');
+}
+
+export function handleClickReset() {
+    create();
+    redirect();
+}
+
+export { COOKIES_ID };
+---
