@@ -1,12 +1,15 @@
 ---
 import Common from "./common.astro";
 import Ruleta from "./ruleta.astro";
-import { COOKIES_ID } from "./public.astro";
+
+const COOKIES_ID = "algorhythmics.ruleta";
 
 function createIfNotExists() {
     if (!Astro.cookies.has(COOKIES_ID)) {
         create();
+        return true;
     }
+    return false;
 }
 
 function create() {
@@ -17,12 +20,13 @@ function parse() {
     return JSON.parse(Astro.cookies.get(COOKIES_ID).value);
 }
 
-createIfNotExists();
+const created = createIfNotExists();
 const data = parse();
+if (created) data.push(150);
 
 ---
 
-<Common>
+<Common text="Fes una aposta per jugar." >
     <Ruleta />
 
 </Common>

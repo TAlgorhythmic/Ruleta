@@ -1,64 +1,86 @@
+---
+const COOKIES_ID = "algorhythmics.ruleta";
+
+// Jugades
+const DOTZENA1 = "1ra Dotzena";
+const DOTZENA2 = "2na Dotzena";
+const DOTZENA3 = "3ra Dotzena";
+
+const PRIMERA = "1ra";
+const SEGONA = "2na";
+const TERCERA = "3ra";
+
+const FINS_18 = "1-18";
+const FINS_36 = "19-36";
+
+const PARELL = "Parell";
+const IMPARELL = "Imparell";
+
+const VERMELL = "Vermell";
+const NEGRE = "Negre";
+---
+
 <head>
-    <link rel="stylesheet" href="ruleta.css">
+    <link rel="stylesheet" href="/ruleta.css">
 </head>
 
 <body>
     <div class="ruleta">
         <div class="upperbox">
             <div class="innerbox">
-                <div id="zero" class="clickable">0</div>
+                <a href="/jugada/0"><div id="zero" class="clickable">0</a></div>
             </div>
             <div class="numberbox">
-                <div class="number red clickable">3</div>
-                <div class="number black clickable">6</div>
-                <div class="number red clickable">9</div>
-                <div class="number red clickable">12</div>
-                <div class="number black clickable">15</div>
-                <div class="number red clickable">18</div>
-                <div class="number red clickable">21</div>
-                <div class="number black clickable">24</div>
-                <div class="number red clickable">27</div>
-                <div class="number red clickable">30</div>
-                <div class="number black clickable">33</div>
-                <div class="number red clickable">36</div>
-                <div class="text green clickable">3ra</div>
-                <div class="number black clickable">2</div>
-                <div class="number red clickable">5</div>
-                <div class="number black clickable">8</div>
-                <div class="number black clickable">11</div>
-                <div class="number red clickable">14</div>
-                <div class="number black clickable">17</div>
-                <div class="number black clickable">20</div>
-                <div class="number red clickable">23</div>
-                <div class="number black clickable">26</div>
-                <div class="number black clickable">29</div>
-                <div class="number red clickable">32</div>
-                <div class="number black clickable">35</div>
-                <div class="text green clickable">2na</div>
-                <div class="number red clickable">1</div>
-                <div class="number black clickable">4</div>
-                <div class="number red clickable">7</div>
-                <div class="number black clickable">10</div>
-                <div class="number black clickable">13</div>
-                <div class="number red clickable">16</div>
-                <div class="number red clickable">19</div>
-                <div class="number black clickable">22</div>
-                <div class="number red clickable">25</div>
-                <div class="number black clickable">28</div>
-                <div class="number black clickable">31</div>
-                <div class="number red clickable">34</div>
-                <div class="text green clickable">1ra</div>
+                <div class="number red clickable"><a href="/jugada/3">3</a></div>
+                <div class="number black clickable"><a href="/jugada/6">6</a></div>
+                <div class="number red clickable"><a href="/jugada/9">9</a></div>
+                <div class="number red clickable"><a href="/jugada/12">12</a></div>
+                <div class="number black clickable"><a href="/jugada/15">15</a></div>
+                <div class="number red clickable"><a href="/jugada/18">18</a></div>
+                <div class="number red clickable"><a href="/jugada/21">21</a></div>
+                <div class="number black clickable"><a href="/jugada/24">24</a></div>
+                <div class="number red clickable"><a href="/jugada/27">27</a></div>
+                <div class="number red clickable"><a href="/jugada/30">30</a></div>
+                <div class="number black clickable"><a href="/jugada/33">33</a></div>
+                <div class="number red clickable"><a href="/jugada/36">36</a></div>
+                <div class="text green clickable"><a href={"/jugada/" + TERCERA}>{TERCERA}</a></div>
+                <div class="number black clickable"><a href="/jugada/2">2</a></div>
+                <div class="number red clickable"><a href="/jugada/5">5</a></div>
+                <div class="number black clickable"><a href="/jugada/8">8</a></div>
+                <div class="number black clickable"><a href="/jugada/11">11</a></div>
+                <div class="number red clickable"><a href="/jugada/14">14</a></div>
+                <div class="number black clickable"><a href="/jugada/17">17</a></div>
+                <div class="number black clickable"><a href="/jugada/20">20</a></div>
+                <div class="number red clickable"><a href="/jugada/23">23</a></div>
+                <div class="number black clickable"><a href="/jugada/26">26</a></div>
+                <div class="number black clickable"><a href="/jugada/29">29</a></div>
+                <div class="number red clickable"><a href="/jugada/32">32</a></div>
+                <div class="number black clickable"><a href="/jugada/35">35</a></div>
+                <div class="text green clickable"><a href={"/jugada/" + SEGONA}>{SEGONA}</a></div>
+                <div class="number red clickable"><a href="/jugada/1">1</a></div>
+                <div class="number black clickable"><a href="/jugada/4">4</a></div>
+                <div class="number red clickable"><a href="/jugada/7">7</a></div>
+                <div class="number black clickable"><a href="/jugada/10">10</a></div>
+                <div class="number black clickable"><a href="/jugada/13">13</a></div>
+                <div class="number red clickable"><a href="/jugada/16">16</a></div>
+                <div class="number red clickable"><a href="/jugada/19">19</a></div>
+                <div class="number black clickable"><a href="/jugada/22">22</a></div>
+                <div class="number red clickable"><a href="/jugada/25">25</a></div>
+                <div class="number black clickable"><a href="/jugada/28">28</a></div>
+                <div class="number black clickable"><a href="/jugada/31">31</a></div>
+                <div class="number red clickable"><a href="/jugada/34">34</a></div>
+                <div class="text green clickable"><a href={"/jugada/" + PRIMERA}>{PRIMERA}</a></div>
             </div>
             <div class="apostes-opcions-box">
-                <div class="text-apostes green ters clickable">1ra Dotzena</div>
-                <div class="text-apostes green ters clickable">2na Dotzena</div>
-                <div class="text-apostes green ters clickable">3ra Dotzena</div>
-                <div class="text-apostes green sisena clickable">1-18</div>
-                <div class="text-apostes green sisena clickable">Parell</div>
-                <div class="text-apostes red sisena clickable">Vermell</div>
-                <div class="text-apostes black sisena clickable">Negre</div>
-                <div class="text-apostes green sisena clickable">Imparell</div>
-                <div class="text-apostes green sisena clickable">19-36</div>
+                <div class="text-apostes green ters clickable"><a href={"/jugada/" + DOTZENA1}>{DOTZENA1}</a></div>
+                <div class="text-apostes green ters clickable"><a href={"/jugada/" + DOTZENA2}>{DOTZENA2}</a></div>
+                <div class="text-apostes green ters clickable"><a href={"/jugada/" + DOTZENA3}>{DOTZENA3}</a></div>
+                <div class="text-apostes green sisena clickable"><a href={"/jugada/" + FINS_18}>{FINS_18}</a></div>
+                <div class="text-apostes green sisena clickable"><a href={"/jugada/" + PARELL}>{PARELL}</a></div>
+                <div class="text-apostes red sisena clickable"><a href={"/jugada/" + VERMELL}>{VERMELL}</a></div>
+                <div class="text-apostes black sisena clickable"><a href={"/jugada/" + NEGRE}>{NEGRE}</a></div>
+                <div class="text-apostes green sisena clickable"><a href={"/jugada/" + IMPARELL}>{IMPARELL}</a></div>
+                <div class="text-apostes green sisena clickable"><a href={"/jugada/" + FINS_36}>{FINS_36}</a></div>
             </div>
         </div>
     </div>
