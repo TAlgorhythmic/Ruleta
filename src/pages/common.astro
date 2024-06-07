@@ -1,5 +1,5 @@
 ---
-const { text, saldo, jugades } = Astro.props;
+const { text, saldo, jugades, jugadaActual, rolledNumber } = Astro.props;
 ---
 
 <html lang="cat">
@@ -22,9 +22,30 @@ const { text, saldo, jugades } = Astro.props;
         </header>
 
         <h1 style="margin-top: 80px;">Joc de la ruleta</h1>
-
-        <p></p>
-
+        <div class="contenidor" style="flex-direction: row;">
+            <p class="margin">{text}</p>
+            {
+                saldo === undefined ? undefined : () => (
+                <p class="margin">Saldo: {saldo}</p>
+                )
+            }
+            {
+                jugades === undefined ? undefined : () => (
+                <p class="margin">Jugades: {jugades}</p>
+                )
+            }
+            {
+                jugadaActual === undefined ? undefined : () => (
+                <p class="margin">Jugada Realitzada: {jugadaActual}</p>
+                )
+            }
+            {
+                rolledNumber === undefined ? undefined : () => (
+                <p class="margin">Numero resultat: {rolledNumber}</p>
+                )
+            }
+        </div>
+        
         <slot />
     </body>
 </html>

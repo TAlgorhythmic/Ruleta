@@ -1,12 +1,12 @@
 ---
-import { COOKIES_ID } from "./public.astro";
+const COOKIES_ID = "algorhythmics.ruleta";
 
 function redirect() {
     return Astro.redirect('/');
 }
 
 function create() {
-    Astro.cookies.set(COOKIES_ID, JSON.stringify([]), { path: '/'});
+    Astro.cookies.set(COOKIES_ID, JSON.stringify([150]), { path: '/'});
 }
 create();
 return redirect();

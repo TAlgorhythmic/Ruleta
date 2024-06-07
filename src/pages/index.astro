@@ -13,20 +13,20 @@ function createIfNotExists() {
 }
 
 function create() {
-    Astro.cookies.set(COOKIES_ID, JSON.stringify([]), { path: '/'});
+    Astro.cookies.set(COOKIES_ID, JSON.stringify([150]), { path: '/'});
 }
 
 function parse() {
     return JSON.parse(Astro.cookies.get(COOKIES_ID).value);
 }
 
-const created = createIfNotExists();
+
+createIfNotExists();
 const data = parse();
-if (created) data.push(150);
 
 ---
 
-<Common text="Fes una aposta per jugar." >
+<Common text="Fes una aposta per jugar." saldo={data[0] + "$"} jugades={data.length - 1}/>
     <Ruleta />
 
 </Common>

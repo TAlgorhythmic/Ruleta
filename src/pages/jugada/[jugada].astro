@@ -33,7 +33,7 @@ function redirect() {
     return Astro.redirect('/');
 }
 function create() {
-    Astro.cookies.set(COOKIES_ID, JSON.stringify([]), { path: '/'});
+    Astro.cookies.set(COOKIES_ID, JSON.stringify([150]), { path: '/'});
 }
 function parse() {
     return JSON.parse(Astro.cookies.get(COOKIES_ID).value);
@@ -51,6 +51,8 @@ function guanyar() {
         guanyat: true
     }
     data.push(novaJugada);
+    data[0] += 10;
+    return novaJugada;
 }
 function perdre() {
     const novaJugada = {
@@ -58,7 +60,9 @@ function perdre() {
         resultat: number,
         guanyat: false
     }
+    data[0] -= 10;
     data.push(novaJugada);
+    return novaJugada;
 }
 
 function constructJugada(j) {
@@ -137,12 +141,16 @@ const data = parse();
 
 const accio = constructJugada(jugada);
 if (accio === undefined) {
-    alert("Jugada no vàlida!")
     return redirect();
 }
-accio();
+const jugadaFinal = accio();
+if (data[0] === 0) {
+    return Astro.redirect('/perdut'); 
+} else {
+    Astro.cookies.set(COOKIES_ID, JSON.stringify(data), { path: '/'});
+}
 ---
 
-<Common text="" saldo="" jugades="">
+<Common text={jugadaFinal.guanyat ? "Has guanyat l'aposta!" : "Has perdut l'aposta! :("} saldo={data[0] + "$"} jugades={data.length - 1} jugadaActual={jugada} rolledNumber={number}>
     <Ruleta />
 </Common>
