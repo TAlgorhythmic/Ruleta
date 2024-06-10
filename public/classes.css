@@ -5,7 +5,7 @@
     justify-content: center;
 }
 .beige {
-    background-color: beige;
+    background-color: gainsboro;
 }
 .row {
     flex-direction: row;
